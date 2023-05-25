@@ -14,13 +14,13 @@ const SinglePost = () => {
     const [desc, setDesc] = useState('');
     const [updateMode, setUpdateMode] = useState(false);
 
-    const publicFolder = "http://localhost:5000/images/"
+    const publicFolder = "https://myblogsitebackend.vercel.app/images/"
     const { user } = useContext(Context)
     const navigate = useNavigate()
 
     useEffect(() => {
         const getPost = async () => {
-            const result = await axios.get('http://localhost:5000/api/post/' + path);
+            const result = await axios.get('https://myblogsitebackend.vercel.app/api/post/' + path);
             // console.log(result)
             setPost(result.data)
             setTitle(result.data.title)
@@ -30,12 +30,12 @@ const SinglePost = () => {
     }, [path])
 
     const handleDelete = async () => {
-        await axios.delete(`http://localhost:5000/api/post/${post._id}`, { data: { username: user.username } })
+        await axios.delete(`https://myblogsitebackend.vercel.app/api/post/${post._id}`, { data: { username: user.username } })
         navigate('/')
     }
 
     const handleUpdate = async () => {
-        await axios.put(`http://localhost:5000/api/post/${post._id}`, { username: user.username, title, desc })
+        await axios.put(`https://myblogsitebackend.vercel.app/api/post/${post._id}`, { username: user.username, title, desc })
         // window.location.reload();
         setUpdateMode(false)
     }

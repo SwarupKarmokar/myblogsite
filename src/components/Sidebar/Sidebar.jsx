@@ -10,7 +10,7 @@ const Sidebar = () => {
 
     useEffect(() => {
         const getCats = async () => {
-            const result = await axios.get('http://localhost:5000/api/categories')
+            const result = await axios.get('https://myblogsitebackend.vercel.app/api/categories')
             setCats(result.data)
         }
 

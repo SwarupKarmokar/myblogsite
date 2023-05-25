@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Setting = () => {
     const { user, dispatch } = useContext(Context)
-    const PF = "http://localhost:5000/images"
+    const PF = "https://myblogsitebackend.vercel.app/images"
 
     const [file, setFile] = useState(null);
     const [username, setUsername] = useState('');
@@ -36,13 +36,13 @@ const Setting = () => {
             updatedUser.profilePic = filename
 
             try {
-                await axios.post("http://localhost:5000/api/uploads", data)
+                await axios.post("https://myblogsitebackend.vercel.app/api/uploads", data)
             } catch (err) {
 
             }
         }
         try {
-            const res = await axios.put("http://localhost:5000/api/user/" + user._id, updatedUser)
+            const res = await axios.put("https://myblogsitebackend.vercel.app/api/user/" + user._id, updatedUser)
             dispatch({ type: "UPDATE_SUCCESS", payload: res.data })
             setSuccess(true)
             navigate('/')

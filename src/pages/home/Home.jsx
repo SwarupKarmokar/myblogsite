@@ -4,7 +4,8 @@ import Posts from '../../components/Posts/Posts'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import axios from 'axios'
 
-const baseUrl = "http://localhost:5000/api";
+const baseUrl = "https://myblogsitebackend.vercel.app/";
+// const baseUrl = "http://localhost:5000/api";
 
 import './HomeStyle.css'
 import { useLocation } from 'react-router-dom'
@@ -24,7 +25,7 @@ const Home = () => {
         // let posts = await fetch(`${baseUrl}/post`)
         // posts = await posts.json()
         // console.log(posts)
-        const result = await axios.get(`${baseUrl}/post` + search)
+        const result = await axios.get(`${baseUrl}api/post` + search)
         setPosts(result.data)
     }
 

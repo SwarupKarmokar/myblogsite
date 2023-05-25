@@ -6,7 +6,7 @@ import { Context } from '../../context/Context'
 
 const Navbar = () => {
     const { user, dispatch } = useContext(Context);
-    const PF = "http://localhost:5000/images"
+    const PF = "https://myblogsitebackend.vercel.app/images"
     // const user = false
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" })

@@ -30,13 +30,13 @@ const Write = () => {
             newPost.photo = filename
 
             try {
-                await axios.post("http://localhost:5000/api/uploads", data)
+                await axios.post("https://myblogsitebackend.vercel.app/api/uploads", data)
             } catch (err) {
 
             }
         }
         try {
-            const res = axios.post("http://localhost:5000/api/post", newPost)
+            const res = axios.post("https://myblogsitebackend.vercel.app/api/post", newPost)
             // window.location.replace("http://localhost:5000/api/post/" + res.data._id)
             navigate('/')
         } catch (err) {

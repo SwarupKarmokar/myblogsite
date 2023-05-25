@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import './PostStyle.css'
 
 const Post = ({ post }) => {
-    const publicFolder = "http://localhost:5000/images/"
+    const publicFolder = "https://myblogsitebackend.vercel.app/images/"
     return (
         <div className='post'>
             <img src={publicFolder + post.photo} alt="" className="postImg" />
