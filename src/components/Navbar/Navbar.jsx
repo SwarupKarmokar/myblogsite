@@ -3,10 +3,11 @@ import './NavStyle.css'
 import { FacebookFilled, InstagramFilled, LinkedinFilled, SearchOutlined, TwitterSquareFilled } from '@ant-design/icons/lib/icons'
 import { Link } from 'react-router-dom'
 import { Context } from '../../context/Context'
+import { baseUrl } from '../../utils/url'
 
 const Navbar = () => {
     const { user, dispatch } = useContext(Context);
-    const PF = "https://myblogsitebackend.vercel.app/images"
+    const PF = `${baseUrl}images`
     // const user = false
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" })

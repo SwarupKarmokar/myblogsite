@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { DeleteOutlined, EditOutlined } from '@ant-design/icons/lib/icons'
 import { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
+import { baseUrl } from '../../utils/url'
 
 import './SinglePost.css'
 import { Context } from '../../context/Context'
@@ -14,13 +15,14 @@ const SinglePost = () => {
     const [desc, setDesc] = useState('');
     const [updateMode, setUpdateMode] = useState(false);
 
-    const publicFolder = "https://myblogsitebackend.vercel.app/images/"
+    const publicFolder = `${baseUrl}images/`
     const { user } = useContext(Context)
     const navigate = useNavigate()
+    // console.log(baseUrl)
 
     useEffect(() => {
         const getPost = async () => {
-            const result = await axios.get('https://myblogsitebackend.vercel.app/api/post/' + path);
+            const result = await axios.get(`${baseUrl}api/post/` + path);
             // console.log(result)
             setPost(result.data)
             setTitle(result.data.title)
@@ -30,12 +32,12 @@ const SinglePost = () => {
     }, [path])
 
     const handleDelete = async () => {
-        await axios.delete(`https://myblogsitebackend.vercel.app/api/post/${post._id}`, { data: { username: user.username } })
+        await axios.delete(`${baseUrl}api/post/${post._id}`, { data: { username: user.username } })
         navigate('/')
     }
 
     const handleUpdate = async () => {
-        await axios.put(`https://myblogsitebackend.vercel.app/api/post/${post._id}`, { username: user.username, title, desc })
+        await axios.put(`${baseUrl}api/post/${post._id}`, { username: user.username, title, desc })
         // window.location.reload();
         setUpdateMode(false)
     }

@@ -4,13 +4,14 @@ import './SidebarStyle.css'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import axios from 'axios'
+import { baseUrl } from '../../utils/url';
 
 const Sidebar = () => {
     const [cats, setCats] = useState([]);
 
     useEffect(() => {
         const getCats = async () => {
-            const result = await axios.get('https://myblogsitebackend.vercel.app/api/categories')
+            const result = await axios.get(`${baseUrl}api/categories`)
             setCats(result.data)
         }
 

@@ -3,6 +3,7 @@ import './Login.css'
 import { Context } from '../../context/Context';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { baseUrl } from '../../utils/url';
 
 const Login = () => {
 
@@ -17,7 +18,7 @@ const Login = () => {
         e.preventDefault();
         dispatch({ type: "LOGIN_START" })
         try {
-            const res = await axios.post('https://myblogsitebackend.vercel.app/api/auth/login', {
+            const res = await axios.post(`${baseUrl}api/auth/login`, {
                 username: userRef.current.value,
                 password: passwordRef.current.value,
             })

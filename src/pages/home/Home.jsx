@@ -4,11 +4,12 @@ import Posts from '../../components/Posts/Posts'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import axios from 'axios'
 
-const baseUrl = "https://myblogsitebackend.vercel.app/";
+// const baseUrl = "https://myblogsitebackend.vercel.app/";
 // const baseUrl = "http://localhost:5000/api";
 
 import './HomeStyle.css'
 import { useLocation } from 'react-router-dom'
+import { baseUrl } from '../../utils/url'
 
 const Home = () => {
     const [posts, setPosts] = useState([]);

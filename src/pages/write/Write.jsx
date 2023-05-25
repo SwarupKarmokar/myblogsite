@@ -4,6 +4,7 @@ import { PlusCircleOutlined } from '@ant-design/icons/lib/icons'
 import { Context } from '../../context/Context'
 import { useNavigate } from 'react-router-dom'
 import './Write.css'
+import { baseUrl } from '../../utils/url'
 
 
 const Write = () => {
@@ -30,7 +31,7 @@ const Write = () => {
             newPost.photo = filename
 
             try {
-                await axios.post("https://myblogsitebackend.vercel.app/api/uploads", data)
+                await axios.post(`${baseUrl}api/uploads`, data)
             } catch (err) {
 
             }

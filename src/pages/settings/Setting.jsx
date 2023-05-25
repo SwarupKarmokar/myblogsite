@@ -5,11 +5,12 @@ import { useContext, useState } from 'react'
 import { Context } from '../../context/Context'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { baseUrl } from '../../utils/url'
 
 
 const Setting = () => {
     const { user, dispatch } = useContext(Context)
-    const PF = "https://myblogsitebackend.vercel.app/images"
+    const PF = `${baseUrl}images`
 
     const [file, setFile] = useState(null);
     const [username, setUsername] = useState('');
@@ -36,13 +37,13 @@ const Setting = () => {
             updatedUser.profilePic = filename
 
             try {
-                await axios.post("https://myblogsitebackend.vercel.app/api/uploads", data)
+                await axios.post(`${baseUrl}api/uploads`, data)
             } catch (err) {
 
             }
         }
         try {
-            const res = await axios.put("https://myblogsitebackend.vercel.app/api/user/" + user._id, updatedUser)
+            const res = await axios.put(`${baseUrl}api/user/` + user._id, updatedUser)
             dispatch({ type: "UPDATE_SUCCESS", payload: res.data })
             setSuccess(true)
             navigate('/')

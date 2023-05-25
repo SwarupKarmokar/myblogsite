@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import './Register.css'
+import { baseUrl } from '../../utils/url'
 
 const Register = () => {
     const [username, setUsername] = useState('')
@@ -15,7 +16,7 @@ const Register = () => {
         e.preventDefault()
         // setError(false)
         try {
-            const res = await axios.post('https://myblogsitebackend.vercel.app/api/auth/register', {
+            const res = await axios.post(`${baseUrl}api/auth/register`, {
                 username, email, password
             })
             navigate('/login')
