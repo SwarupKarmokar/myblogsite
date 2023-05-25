@@ -1,0 +1,53 @@
+.top {
+    width: 100%;
+    height: 50px;
+    background: lightblue;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+.topLeft,
+.topRight {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.topImg {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.topCenter {
+    flex: 6;
+}
+
+.topList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+
+.topListItem {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.topListItem Link {
+    text-decoration: none;
+
+}

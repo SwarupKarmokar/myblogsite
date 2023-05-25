@@ -1,0 +1,51 @@
+.post {
+    width: 500px;
+    margin: 0 25px 40px 25px;
+}
+
+.postImg {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.postInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.postCat {
+    font-size: 11px;
+    color: orange;
+    line-height: 20px;
+    margin-top: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.postTitle {
+    font-family: cursive;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.postDate {
+    font-style: italic;
+    font-size: 13px;
+    color: gray;
+    margin-top: 5px;
+}
+
+.postDesc {
+    font-size: 14px;
+    color: #1a1a1a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
