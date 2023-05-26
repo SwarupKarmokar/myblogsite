@@ -41,7 +41,8 @@
 }
 
 .postDesc {
-    font-size: 14px;
+    font-size: 20px;
+    font-style: italic;
     color: #1a1a1a;
     overflow: hidden;
     text-overflow: ellipsis;

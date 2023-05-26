@@ -45,3 +45,29 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+
+@media screen and (width < 700px) {
+    .writeForm {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .writeFormGroup {
+        margin-left: 20px;
+    }
+
+    .writeInput {
+        font-size: 20px;
+        width: 90vw;
+    }
+
+    .writeSubmit {
+        top: -20px;
+        right: 40px;
+    }
+
+    .writeImg {
+        margin-left: 40px;
+    }
+}

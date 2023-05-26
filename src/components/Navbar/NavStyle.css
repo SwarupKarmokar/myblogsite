@@ -7,8 +7,9 @@
     display: flex;
     align-items: center;
     font-family: 'Josefin Sans', sans-serif;
+    overflow: hidden;
+    z-index: 4;
 }
-
 
 
 .topLeft,
@@ -49,5 +50,21 @@
 
 .topListItem Link {
     text-decoration: none;
+}
 
+
+
+
+@media screen and (width < 784px) {
+    .topList {
+        gap: 5px;
+    }
+
+    .topRight {
+        gap: 5px;
+    }
+
+    #title {
+        font-size: 10px;
+    }
 }

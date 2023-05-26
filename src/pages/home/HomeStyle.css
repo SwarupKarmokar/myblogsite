@@ -1,4 +1,9 @@
 .home {
     display: flex;
+}
 
+@media screen and (width < 784px) {
+    .home {
+        flex-direction: column;
+    }
 }

@@ -18,6 +18,8 @@
 
 .singlepostTitle {
     text-align: center;
+    color: gray;
+    font-style: italic;
     margin: 10px;
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
@@ -57,6 +59,7 @@
     color: #666;
     font-size: 18px;
     font-family: sans-serif;
+    font-style: italic;
     font-weight: bold;
     line-height: 1.5;
 }
@@ -96,4 +99,16 @@
 
 .singlePostButton:hover {
     background-color: lightgreen;
+}
+
+
+
+@media screen and (width < 784px) {
+    .singlepost {
+        margin-right: 20px;
+    }
+
+    .singlepostTitle {
+        font-size: 20px;
+    }
 }

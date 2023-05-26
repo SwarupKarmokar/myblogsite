@@ -20,7 +20,7 @@ const Navbar = () => {
                 <TwitterSquareFilled />
                 <LinkedinFilled />
                 <InstagramFilled /> */}
-                <h4 style={{ fontFamily: "cursive" }}>@masterblog</h4>
+                <h2 id='title' style={{ fontFamily: "monospace" }}>@masterblog</h2>
             </div>
 
             {/* adding links  */}

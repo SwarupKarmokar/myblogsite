@@ -43,3 +43,10 @@
     width: 50%;
     cursor: pointer;
 }
+
+
+@media screen and (width < 784px) {
+    .sidebarItem>img {
+        width: 40%;
+    }
+}
